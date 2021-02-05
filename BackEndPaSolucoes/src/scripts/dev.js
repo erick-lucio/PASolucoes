@@ -5,8 +5,8 @@ const server = express();
 const helmet = require("helmet");
 const Routes = require('../Routes/index')
 
-//var hoje = new Date()
-//console.log(hoje.toISOString())
+var hoje = new Date().toLocaleString("pt-BR", {timeZone: "America/Sao_Paulo"})
+console.log(hoje)
 
 server.use(bodyParser.json());
 server.use(cors());

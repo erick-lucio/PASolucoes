@@ -14,14 +14,14 @@ function sendEmail(obj){
     from: 'ericklucio.suv@gmail.com',
     to: 'ericklucio-suv@hotmail.com,hamilton.andrade@etec.sp.gov.br',
     subject: 'TesteApp',
-    text: hoje.toISOString(),
-    attachments: [
+    text: hoje.toISOString()
+    /*attachments: [
         {
           filename: 'mailtrap.png',
           path: __dirname + '/mailtrap.png',
           cid: 'uniq-mailtrap.png' 
         }
-      ]
+      ]*/
   }
   smtpTransport.sendMail(mailOptions, function(error, response){
       if(error){
@@ -37,7 +37,7 @@ function sendEmail(obj){
             rejected = response.rejected.join()
             from = response.envelope.from
             to = response.envelope.to.join()
-
+            console.log(response)
             console.log(
                 {
                     successList: success,
