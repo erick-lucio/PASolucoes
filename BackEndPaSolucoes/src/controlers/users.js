@@ -1,4 +1,5 @@
 const dbConnection = require("../database/exportConnection")
+const SendEmail = require('../Mailer/EmailSender')
 
 module.exports = {
     async getUserByLoginAndPass(req,res,next){
@@ -34,8 +35,13 @@ module.exports = {
             next()
         })
     },
-    async updateUserById(req,res){
-
+    async updateUserById(req,res,next){
+        var response = {                
+            message:"Nenhum usuario Encontrado",
+            objData:0
+        }
+        next.response = response        
+        next()
     },
     async createUser(req,res){
 

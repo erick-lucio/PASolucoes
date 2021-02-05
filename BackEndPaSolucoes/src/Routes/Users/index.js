@@ -4,6 +4,7 @@ const userRoutes = express.Router();
 const UserControler = require("../../Controlers/users")
 const AuthSecurity = require("../../Security/auth")
 const defaultResponse = require('../../Controlers/formatResponse')
+const configController = require('../../Controlers/config')
 
 userRoutes.get("/users/usersAll",  
     AuthSecurity.verifyJWT,
@@ -30,5 +31,7 @@ userRoutes.post("/users/deleteuser",
     UserControler.deleteUser,
     defaultResponse.defaultResponse
 )
-
+userRoutes.get("/email/teste",
+    configController.EmailTeste
+)
 module.exports = userRoutes ;
