@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const server = express();
 const helmet = require("helmet");
 const Routes = require('../Routes/index')
-process.env.dbConnection = "connectionProd"
+
 
 server.use(bodyParser.json());
 server.use(cors());

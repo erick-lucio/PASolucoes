@@ -12,9 +12,16 @@ function sendEmail(obj){
   var hoje = new Date()
   const mailOptions = { // Define informações pertinentes ao E-mail que será enviado
     from: 'ericklucio.suv@gmail.com',
-    to: 'ericklucio-suv@hotmail.com',
-    subject: 'Secundo teste de email',
-    text: hoje.toISOString()
+    to: 'ericklucio-suv@hotmail.com,hamilton.andrade@etec.sp.gov.br',
+    subject: 'TesteApp',
+    text: hoje.toISOString(),
+    attachments: [
+        {
+          filename: 'mailtrap.png',
+          path: __dirname + '/mailtrap.png',
+          cid: 'uniq-mailtrap.png' 
+        }
+      ]
   }
   smtpTransport.sendMail(mailOptions, function(error, response){
       if(error){

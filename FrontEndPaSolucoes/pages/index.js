@@ -26,6 +26,10 @@ export default function Index(props) {
   }
   return (
     <div className="main">
+      <Head>
+        <title>Projeto PA</title>
+        <link rel="icon" href="/favicon.ico" />        
+      </Head>
     <div className="login">
         <h1>Olá</h1>
         <h2>Para se manter conectado faça o login</h2>
