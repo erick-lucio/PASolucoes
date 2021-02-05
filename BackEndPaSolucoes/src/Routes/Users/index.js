@@ -1,10 +1,10 @@
 const express = require("express");
 const Routes = express.Router()
 const userRoutes = express.Router();
-const UserControler = require("../../Controlers/users")
+const UserControler = require("../../controlers/users")
 const AuthSecurity = require("../../Security/auth")
-const defaultResponse = require('../../Controlers/formatResponse')
-const configController = require('../../Controlers/config')
+const defaultResponse = require('../../controlers/formatResponse')
+const configController = require('../../controlers/config')
 
 userRoutes.get("/users/usersAll",  
     AuthSecurity.verifyJWT,
