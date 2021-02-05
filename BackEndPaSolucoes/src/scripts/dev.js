@@ -3,7 +3,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const server = express();
 const helmet = require("helmet");
-const Routes = require('../routes/index')
+const Routes = require('../Routes/index')
 
 //var hoje = new Date().toLocaleString("pt-BR", {timeZone: "America/Sao_Paulo"})
 //console.log(hoje)
