@@ -3,7 +3,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const server = express();
 const helmet = require("helmet");
-const Routes = require('../Routes/index')
+const Routes = require('../routes/index')
 
 
 server.use(bodyParser.json());

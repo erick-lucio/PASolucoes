@@ -36,8 +36,7 @@ function sendEmail(obj){
             success = response.accepted.join()
             rejected = response.rejected.join()
             from = response.envelope.from
-            to = response.envelope.to.join()
-            console.log(response)
+            to = response.envelope.to.join()            
             console.log(
                 {
                     successList: success,

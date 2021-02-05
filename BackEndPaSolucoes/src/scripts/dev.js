@@ -3,7 +3,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const server = express();
 const helmet = require("helmet");
-const Routes = require('../Routes/index')
+const Routes = require('../routes/index')
 
 //var hoje = new Date().toLocaleString("pt-BR", {timeZone: "America/Sao_Paulo"})
 //console.log(hoje)
@@ -20,5 +20,5 @@ const PORT =  3102;
 server.use(Routes);
 
 server.listen(PORT, () => {
-    console.log(`Server rodando na porta  ${PORT}`);
+    console.log(`Server rodando em http://localhost:${PORT}`);
 });

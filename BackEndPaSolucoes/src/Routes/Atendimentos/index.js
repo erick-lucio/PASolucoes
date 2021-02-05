@@ -2,7 +2,7 @@ const express = require("express");
 const Routes = express.Router()
 const AtendimentoRoutes = express.Router();
 const AtendimentoControler = require("../../controlers/atendimentos")
-const AuthSecurity = require("../../Security/auth")
+const AuthSecurity = require("../../security/auth")
 const defaultResponse = require('../../controlers/formatResponse')
 
 AtendimentoRoutes.get("/atendimento/atendimentoAll",  
