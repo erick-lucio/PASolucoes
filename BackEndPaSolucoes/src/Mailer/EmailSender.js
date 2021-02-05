@@ -9,12 +9,12 @@ function sendEmail(obj){
           pass: 'kqqxuhsfgdqwzgrm'
       }
   });
-  var hoje = new Date()
+  
   const mailOptions = { // Define informações pertinentes ao E-mail que será enviado
     from: 'ericklucio.suv@gmail.com',
     to: 'ericklucio-suv@hotmail.com',
     subject: 'TesteApp',
-    text: hoje.toISOString()
+    text: new Date().toLocaleString("pt-BR", {timeZone: "America/Sao_Paulo"})// temporario para teste
     /*attachments: [
         {
           filename: 'mailtrap.png',
