@@ -12,9 +12,9 @@ function sendEmail(obj){
   
   const mailOptions = { // Define informações pertinentes ao E-mail que será enviado
     from: 'ericklucio.suv@gmail.com',
-    to: 'ericklucio-suv@hotmail.com',
-    subject: 'TesteApp',
-    text: new Date().toLocaleString("pt-BR", {timeZone: "America/Sao_Paulo"})// temporario para teste
+    to: obj,
+    subject: 'Testando modulo de email',
+    text: "Hoje e :" +new Date().toLocaleString("pt-BR", {timeZone: "America/Sao_Paulo"})// temporario para teste
     /*attachments: [
         {
           filename: 'mailtrap.png',
@@ -37,14 +37,15 @@ function sendEmail(obj){
             rejected = response.rejected.join()
             from = response.envelope.from
             to = response.envelope.to.join()            
-            console.log(
+            var objTo =
                 {
                     successList: success,
                     rejectedList: rejected,
                     from: from,
                     toList:to
                 }
-            )
+            
+            console.log("Email enviado para "+toList)
 
           }          
       }

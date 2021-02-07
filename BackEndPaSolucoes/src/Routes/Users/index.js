@@ -31,7 +31,5 @@ userRoutes.post("/users/deleteuser",
     UserControler.deleteUser,
     defaultResponse.defaultResponse
 )
-userRoutes.get("/email/teste",
-    configController.EmailTeste
-)
+
 module.exports = userRoutes ;

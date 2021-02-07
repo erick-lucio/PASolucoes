@@ -1,0 +1,70 @@
+.col_inputs input[type="submit"]:hover{
+    cursor: pointer;
+    background: #ff4d4d;
+    transition: 0.2s;    
+}
+.col_inputs input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 30px;
+    color: #000;
+    background: #fff;
+    border-radius: 10px;
+    transition: 0.2s;
+    margin-left: 20px;
+    max-width: 260px;
+    margin-top: 20px;
+}
+.div_grafico_container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+.relatorioFiltrosRow{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.relatorioFiltrosRow p{
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.relatorioFiltrosCol{
+    display: flex;
+    justify-content: center;
+
+}
+.relatorioDateInput{
+    height: 20px;
+    margin-top: 13px;
+    margin-left: 5px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+.select_relatorios{
+    height: 20px;
+    margin-top: 13px;
+    margin-left: 5px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+.relatorioFiltrosCol input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 35px;
+    color: #000;
+    background: rgba(189, 186, 186, 0.623);
+    border-radius: 10px;
+    transition: 0.2s;
+    margin-left: 25px;
+}
+.relatorioFiltrosCol input[type="submit"]:hover{
+    cursor: pointer;
+    background: #ff4d4d;
+    transition: 0.2s;
+}

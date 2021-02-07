@@ -1,15 +1,16 @@
 import Head from 'next/head'
 import React, { useState } from 'react';
-import {Container,WelcomeDiv,LoginDiv,Text,DefaultInput,DefaultButton} from '../assets/styles/index'
-
+import LoginComponent from '../components/login'
+import HomeComponent from '../components/home'
 //
-import BackGroundImg from '../assets/imgs/MainPageLosango.png'
+
 
 const userServices = require("../services/users")
 
 export default function Index(props) {
   const [urlData, setUrlData] = useState("")
-  
+  const [logged, setLogged] = useState(0)
+  var asds = 1
   const login = async ()=>{    
     var login = document.getElementById("loginInput").value.trim()
     var senha = document.getElementById("senhaInput").value.trim()
@@ -25,27 +26,8 @@ export default function Index(props) {
 
   }
   return (
-    <div className="main">
-      <Head>
-        <title>Projeto PA</title>
-        <link rel="icon" href="/favicon.ico" />        
-      </Head>
-    <div className="login">
-        <h1>Olá</h1>
-        <h2>Para se manter conectado faça o login</h2>
-        <form action="">
-
-            <p>Usuario</p>
-            <input type="text" name="" placeholder="Insira seu e-mail"></input>
-
-            <p>Senha</p>
-            <input type="password" name="" placeholder="Insira sua senha"></input>
-            <input type="submit" name="" value="Login"></input>
-            <a href="#">Esqueceu sua senha?</a><br/>            
-
-        </form>
-    </div>
-
-    </div>     
+    <> 
+    {logged == 1?<HomeComponent setLogged={setLogged}/> :<LoginComponent setLogged={setLogged}/>}
+    </>
   )
 }

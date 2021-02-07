@@ -1,15 +1,6 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-image: url(../../FrontEndPaSolucoes/assets/imgs/bgcd.jpg);
-    background-size: cover;
-    font-family: "Comfortaa", sans-serif;
-}
-
-.login{
-
-    width: 400px;
-    height: 650px;
+.loginComponent_login{
+    width: 320px;
+    height: 470px;
     border: 2px solid #000;
     border-radius: 80px 0px 80px 0px;
     color: #fff;
@@ -22,37 +13,36 @@ body{
     padding: 68px 28px;
 }
 
-h1{
+.loginComponent_login h1{
     margin: 0;
     padding-top: 0;
     padding-left: 0;
-    padding-bottom: 10px;
-    letter-spacing: 5px;
+    padding-bottom: 20px;
+    letter-spacing: 10px;
     text-transform: uppercase;
     text-align: center;
     font-size: 25px;
 
 }
 
-h2{
+.loginComponent_login h2{
     font-size: 12px;
     margin-bottom: 25px;
     text-align: center;
 }
 
-.login p{
+.loginComponent_login p{
     margin: 0;
     padding: 0;
     font-weight: bold;
-
 }
 
-.login input{
+.loginComponent_login input{
     width: 100%;
     margin-bottom: 21px;
 }
 
-.login input[type="text"], input[type="password"], input[type="number"]{
+.loginComponent_login input[type="text"], input[type="password"]{
     border: none;
     border-bottom: 1px solid white;
     background: transparent;
@@ -62,14 +52,7 @@ h2{
     font-size: 16px;
 }
 
-.login input[type="checkbox"]{
-
-        width: 20px;
-        margin-top: 10px;
-
-}
-
-.login input[type="submit"] {
+.loginComponent_login input[type="submit"] {
     border: none;
     outline: none;
     height: 35px;
@@ -79,13 +62,13 @@ h2{
     transition: 0.2s;
 }
 
-.login input[type="submit"]:hover{
+.loginComponent_login input[type="submit"]:hover{
     cursor: pointer;
     background: #ff4d4d;
     transition: 0.2s;
 }
 
-.login a {
+.loginComponent_login a {
     font-weight: bold;
     text-decoration: none;
     font-size: 12px;
@@ -95,7 +78,10 @@ h2{
 
 }
 
-.login a:hover{
+.loginComponent_login a:hover{
     transition: 0.2s;
     color: #ff4d4d;
+}
+.loginComponent_login .forget_password{
+    color: #fff;
 }
