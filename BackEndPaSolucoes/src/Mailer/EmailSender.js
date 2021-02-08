@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer'); 
 const { join } = require('path');
 
-function sendEmail(obj){
+function sendEmail(sentTo){
   var smtpTransport = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -9,10 +9,10 @@ function sendEmail(obj){
           pass: 'kqqxuhsfgdqwzgrm'
       }
   });
-  
+  console.log("Enviando Email para "+sentTo)
   const mailOptions = { // Define informações pertinentes ao E-mail que será enviado
     from: 'ericklucio.suv@gmail.com',
-    to: obj,
+    to: sentTo,
     subject: 'Testando modulo de email',
     text: "Hoje e :" +new Date().toLocaleString("pt-BR", {timeZone: "America/Sao_Paulo"})// temporario para teste
     /*attachments: [

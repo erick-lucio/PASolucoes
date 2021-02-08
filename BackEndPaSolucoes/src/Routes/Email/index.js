@@ -5,10 +5,7 @@ const AuthSecurity = require("../../Security/auth")
 const defaultResponse = require('../../controlers/formatResponse')
 const emailController = require('../../controlers/email')
 
-emailRoutes.post("/email/sendteste", 
-    ()=>{
-        console.log("passou nas rotar")
-    },
+emailRoutes.post("/email/sendteste",
     emailController.sendEmail
 )
 
