@@ -11,6 +11,7 @@ export default function Index(props) {
   const [urlData, setUrlData] = useState("")
   const [logged, setLogged] = useState(0)
   var asds = 1
+  
   const login = async ()=>{    
     var login = document.getElementById("loginInput").value.trim()
     var senha = document.getElementById("senhaInput").value.trim()
