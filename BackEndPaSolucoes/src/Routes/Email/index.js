@@ -6,7 +6,9 @@ const defaultResponse = require('../../controlers/formatResponse')
 const emailController = require('../../controlers/email')
 
 emailRoutes.post("/email/sendteste", 
-    console.log("Passou na rota"),
+    ()=>{
+        console.log("passou nas rotar")
+    },
     emailController.sendEmail
 )
 
