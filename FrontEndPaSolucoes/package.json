@@ -6,7 +6,7 @@
     "dev": "next dev",
     "test": "",
     "build": "next build",
-    "start": "next start -p 480"
+    "start": "next start -p 80"
   },
   "dependencies": {
     "axios": "^0.21.1",
