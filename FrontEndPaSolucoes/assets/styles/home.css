@@ -6,7 +6,7 @@
     height: 200px;
 }
 .home_col1{
-
+    display: flex;
 }
 .home_col1 input[type="submit"] {
     border: none;
@@ -68,4 +68,10 @@
     margin-top: 50px;
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 700px) { 
+    .div_email_teste{
+        margin-top: 35%;
+    }
 }
