@@ -1,8 +1,8 @@
 const express = require("express");
 const Routes = express.Router()
 const todosRoutes = express.Router();
-const TodosControler = require("../../controlers/todos")
-const AuthSecurity = require("../../Security/auth")
+const TodosControler = require("../../Controlers/todos")
+const AuthSecurity = require("../../Security/Auth")
 const defaultResponse = require('../../Controlers/formatResponse')
 
 todosRoutes.get("/todos/todosAll",  

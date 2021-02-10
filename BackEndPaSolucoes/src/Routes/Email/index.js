@@ -1,9 +1,9 @@
 const express = require("express");
 const Routes = express.Router()
 const emailRoutes = express.Router();
-const AuthSecurity = require("../../Security/auth")
-const defaultResponse = require('../../Controlers/formatResponse')
-const emailController = require('../../Controlers/email')
+const AuthSecurity = require("../../Security/Auth")
+const defaultResponse = require('../../Controlers/FormatResponse')
+const emailController = require('../../Controlers/Email')
 
 emailRoutes.post("/email/sendteste",
     emailController.sendEmail
