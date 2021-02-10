@@ -1,9 +1,9 @@
 const express = require("express");
 const Routes = express.Router()
 const AtendimentoRoutes = express.Router();
-const AtendimentoControler = require("../../controlers/atendimentos")
-const AuthSecurity = require("../../Security/auth")
-const defaultResponse = require('../../controlers/formatResponse')
+const AtendimentoControler = require("../../Controlers/Atendimentos")
+const AuthSecurity = require("../../Security/Auth")
+const defaultResponse = require('../../Controlers/FormatResponse')
 
 AtendimentoRoutes.get("/atendimento/atendimentoAll",  
     AuthSecurity.verifyJWT,

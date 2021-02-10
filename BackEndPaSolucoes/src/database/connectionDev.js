@@ -1,7 +1,7 @@
 //const mysql  = require('mysql');
 const mysql = require('mysql2');
 const sshClient = require('ssh2');
-const dbConfig = require('./dbConfig')
+const dbConfig = require('./DbConfig')
 const connection = module.exports = function(){};
 
 createDBConnection = function(){

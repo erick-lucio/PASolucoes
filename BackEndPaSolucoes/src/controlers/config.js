@@ -1,4 +1,4 @@
-const dbConnection = require("../database/exportConnection")
+const dbConnection = require("../Database/ExportConnection")
 const SendEmail = require('../Mailer/EmailSender')
 
 module.exports = {

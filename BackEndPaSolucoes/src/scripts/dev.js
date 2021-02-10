@@ -3,7 +3,9 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const server = express();
 const helmet = require("helmet");
-const Routes = require('../Routes/index')
+const Routes = require('../Routes/Index')
+// const Logger = require('../Logs/logger').Logger
+//Logger.specificLog('mysql-error', `error connecting: ${​​err.stack}​​`)​​​​​​​
 
 //var hoje = new Date().toLocaleString("pt-BR", {timeZone: "America/Sao_Paulo"})
 //console.log(hoje)

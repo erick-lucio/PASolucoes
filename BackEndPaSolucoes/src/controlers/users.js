@@ -1,4 +1,4 @@
-const dbConnection = require("../database/exportConnection")
+const dbConnection = require("../Database/ExportConnection")
 const SendEmail = require('../Mailer/EmailSender')
 
 module.exports = {
@@ -29,7 +29,7 @@ module.exports = {
         dbConnection.invokeQuery(sqlQuery,(rows)=>{
             var response = {                
                 message:rows.length > 0 ? 'Usuarios':"Nenhum usuario Encontrado",
-                objData:rows.length > 0?rows:0
+                objData:rows.length > 0 ? rows:0
             }
             next.response = response
             next()
