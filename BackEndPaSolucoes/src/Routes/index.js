@@ -1,10 +1,10 @@
 const express = require("express");
 const Routes = express.Router()
-const userRoutes = require("./Users/Index")
-const todosRoutes = require("./Todos/Index")
-const clientesRoutes = require("./Clientes/Index")
-const atendimentosRoutes = require("./Atendimentos/Index")
-const emailRoutes = require("./Email/Index")
+const userRoutes = require("./users")
+const todosRoutes = require("./todos")
+const clientesRoutes = require("./clientes")
+const atendimentosRoutes = require("./atendimentos")
+const emailRoutes = require("./email")
 
 // Routes.use((req, res, next) => {​​
 //     Authenticate.verify(req, res, next)

@@ -1,6 +1,6 @@
 var path = require('path');
-const DevDB = require("./ConnectionDev")
-const ProdDB = require("./ConnectionProd")
+const DevDB = require("./connectionDev")
+const ProdDB = require("./connectionProd")
 
 if(process.env.NODE_ENV == "dev"){
     module.exports = DevDB

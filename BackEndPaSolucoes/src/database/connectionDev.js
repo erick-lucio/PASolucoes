@@ -1,7 +1,7 @@
 //const mysql  = require('mysql');
 const mysql = require('mysql2');
 const sshClient = require('ssh2');
-const dbConfig = require('./DbConfig')
+const dbConfig = require('./dbConfig')
 const connection = module.exports = function(){};
 
 createDBConnection = function(){
@@ -35,7 +35,18 @@ try {
                    dbConfig.mySQLConfig.stream = stream
     
                    const db = mysql.createConnection(dbConfig.mySQLConfig)
-            
+                   db.config.queryFormat = function (query, values) {​
+                        if (!values) {
+                            return query                
+                        }
+                        return query.replace(/\:(\w+)/g, function (txt, key) {
+                            if (values.hasOwnProperty(key)) {
+                                return this.escape(values[key])                
+                            }
+                            return txt
+                    
+                        }​​.bind(this))                
+                    }​​
                    db.query(sqlQuery, function(err,rows){
                   
                        if(rows){                   
