@@ -1,4 +1,4 @@
-const dbConnection = require("../Database/ExportConnection")
+const dbConnection = require("../Database/exportConnection")
 
 module.exports = {
     async getAllClientes(req,res){

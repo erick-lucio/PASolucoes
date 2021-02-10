@@ -1,5 +1,5 @@
-const dbConnection = require("../Database/ExportConnection")
-const SendEmail = require('../Mailer/EmailSender')
+const dbConnection = require("../Database/exportConnection")
+const SendEmail = require('../Mailer/emailSender')
 
 module.exports = {
     async getUserByLoginAndPass(req,res,next){

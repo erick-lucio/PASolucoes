@@ -1,4 +1,4 @@
-const Auth = require('../Security/Auth')
+const Auth = require('../Security/auth')
 
 module.exports = {
     async defaultResponse(req,res,next){
