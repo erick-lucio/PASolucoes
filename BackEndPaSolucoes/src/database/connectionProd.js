@@ -15,14 +15,14 @@ createDBConnection = function(){
 }
 
 try {
-    connection.invokeQuery = function(sqlQuery,data){
+    connection.invokeQuery = function(sqlQuery,params,data){
         dbConfig.localhost,
         dbConfig.mySQLConfig.timeout,
         dbConfig.localhost,
         dbConfig.mySQLConfig.port
             
         const db = mysql.createConnection(dbConfig.mySQLConfig)        
-        db.query(sqlQuery, function(err,rows){
+        db.query(sqlQuery,params, function(err,rows){
             if(rows){                   
             data(rows)
             } 

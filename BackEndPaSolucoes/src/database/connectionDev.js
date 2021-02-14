@@ -6,18 +6,18 @@ const connection = module.exports = function(){};
 
 createDBConnection = function(){
     const mysqlConnection = mysql.createConnection({
-        host:dbConfig.mySQLConfig.host,
-        user:dbConfig.mySQLConfig.user,
-        password:dbConfig.mySQLConfig.password,
-        database:dbConfig.mySQLConfig.database,
-        connectTimeout:dbConfig.mySQLConfig.timeout
+        host:dbConfig.mySQLConfigDev.host,
+        user:dbConfig.mySQLConfigDev.user,
+        password:dbConfig.mySQLConfigDev.password,
+        database:dbConfig.mySQLConfigDev.database,
+        connectTimeout:dbConfig.mySQLConfigDev.timeout
     });
 
     return mysqlConnection
 }
 
 try {
-    connection.invokeQuery = function(sqlQuery,data){
+    connection.invokeQuery = function(sqlQuery,params,data){
         const ssh = new sshClient()
     
         ssh.connect(dbConfig.sshConfig)
@@ -25,36 +25,22 @@ try {
         ssh.on('ready',function() {
             ssh.forwardOut(
                dbConfig.localhost,
-               dbConfig.mySQLConfig.timeout,
+               dbConfig.mySQLConfigDev.timeout,
                dbConfig.localhost,
-               dbConfig.mySQLConfig.port,
+               dbConfig.mySQLConfigDev.port,
                function(err,stream){           
                    if (err){      
                         console.log(err)                   
                    }
-                   dbConfig.mySQLConfig.stream = stream
-    
-                   const db = mysql.createConnection(dbConfig.mySQLConfig)
-                   db.config.queryFormat = function (query, values) {​
-                        if (!values) {
-                            return query                
-                        }
-                        return query.replace(/\:(\w+)/g, function (txt, key) {
-                            if (values.hasOwnProperty(key)) {
-                                return this.escape(values[key])                
-                            }
-                            return txt
-                    
-                        }​​.bind(this))                
-                    }​​
-                   db.query(sqlQuery, function(err,rows){
-                  
+                   dbConfig.mySQLConfigDev.stream = stream    
+                   const db = mysql.createConnection(dbConfig.mySQLConfigDev)        
+                   db.query(sqlQuery,params, function(err,rows){
                        if(rows){                   
-                        data(rows)
+                       data(rows)
                        } 
                        if(err){                  
-                            console.log(err)
-                        } 
+                           console.log(err)
+                       } 
                    })
                } 
             )

@@ -1,0 +1,41 @@
+ssh root@134.122.22.83
+sudo apt update
+sudo apt upgrade
+sudo apt install mysql-server
+sudo mysql_secure_installation
+sudo mysql
+
+
+sudo apt install npm
+sudo npm cache clean -f
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.1/install.sh | bash
+nvm install 15.4.0
+nvm use 15.4.0
+npm i -g pm2
+
+// creating user
+useradd app
+passwd app aPpPassWd43U76H7yH76H20
+
+///////////// my sql comands
+
+ssh root@165.22.45.215
+sudo ufw allow port
+
+CREATE USER 'app'@'%' IDENTIFIED BY 'kyuubi2014';
+GRANT SELECT,DELETE,EXECUTE,INSERT,UPDATE ON *.* TO 'app'@'%';
+
+flush privileges;
+
+// initializing git
+git config --global credential.helper store
+
+###used ports
+3102 sql closed
+80/8080 open
+547 email
+
+sudo ufw allow port
+
+
+mysql -u root -p // loga my no server
