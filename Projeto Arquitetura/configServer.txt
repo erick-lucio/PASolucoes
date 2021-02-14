@@ -44,6 +44,8 @@ mysql -u root -p // loga my no server
 git config core.ignorecase false
 
 //PM2 config
-NODE_ENV=prod pm2 start prod.js --name backEnd --watch
-npm run build && pm2 start npm --name frontEnd "next" -- start
+////////////////////////////////////////////////////////// N usar//NODE_ENV=prod pm2 start prod.js --name backEnd --watch  ///BackEnd
+
+npm run build && pm2 start npm --name "frontEnd" -- start ///Front End
+pm2 start npm --name "backEnd" --watch -- start   ///BackEnd
 
