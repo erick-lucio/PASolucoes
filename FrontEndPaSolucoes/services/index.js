@@ -1,1 +1,1 @@
-module.exports = process.env.NEXT_PUBLIC_NODE_ENV == "prod"? "http://134.122.22.83:3102":"http://localhost:3102"
+module.exports = process.env.NEXT_PUBLIC_NODE_ENV? process.env.NEXT_PUBLIC_NODE_ENV == "prod"?"http://134.122.22.83:3102":"http://localhost:3102":"http://localhost:3102"
