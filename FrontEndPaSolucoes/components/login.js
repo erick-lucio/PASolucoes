@@ -38,6 +38,8 @@ export default function Login(props) {
             <p>Senha</p>
             <input type="password" name="" placeholder="Insira sua senha"></input>
             <input type="submit" name="" value="Login" onClick={()=>props.setLogged(1)}></input>
+            <input type="submit" name="" value="Login" onClick={()=>alert(process.env.NEXT_PUBLIC_NODE_ENV)}></input>
+            
             <a href="#" className="forget_password">Esqueceu sua senha?</a><br/>            
 
         </form>
