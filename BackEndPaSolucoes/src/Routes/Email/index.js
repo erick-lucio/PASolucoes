@@ -1,7 +1,7 @@
 const express = require("express");
 const Routes = express.Router()
 const emailRoutes = express.Router();
-const AuthSecurity = require("../../Security/Auth")
+const AuthSecurity = require("../../security/auth")
 const defaultResponse = require('../../controlers/formatResponse')
 const emailController = require('../../controlers/email')
 

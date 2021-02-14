@@ -1,7 +1,7 @@
 const express = require("express");
 const userRoutes = express.Router();
 const UserControler = require("../../controlers/users")
-const AuthSecurity = require("../../Security/Auth")
+const AuthSecurity = require("../../security/auth")
 const defaultResponse = require('../../controlers/formatResponse')
 const configController = require('../../controlers/config')
 

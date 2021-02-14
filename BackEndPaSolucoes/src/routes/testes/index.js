@@ -1,6 +1,6 @@
 const express = require("express");
 const testeRoutes = express.Router();
-const AuthSecurity = require("../../Security/Auth")
+const AuthSecurity = require("../../security/auth")
 const defaultResponse = require('../../controlers/formatResponse')
 const testeController = require("../../controlers/testes")
 
