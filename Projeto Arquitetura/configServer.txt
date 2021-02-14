@@ -17,11 +17,12 @@ npm i -g pm2
 useradd app
 passwd app aPpPassWd43U76H7yH76H20
 
-///////////// my sql comands
+
 
 ssh root@165.22.45.215
 sudo ufw allow port
 
+///////////// my sql comands
 CREATE USER 'app'@'%' IDENTIFIED BY 'kyuubi2014';
 GRANT SELECT,DELETE,EXECUTE,INSERT,UPDATE ON *.* TO 'app'@'%';
 
@@ -40,6 +41,9 @@ sudo ufw allow port
 
 mysql -u root -p // loga my no server
 
+git config core.ignorecase false
 
 //PM2 config
-NODE_ENV=prod pm2 start prod.js --name backEnd
+NODE_ENV=prod pm2 start prod.js --name backEnd --watch
+npm run build && pm2 start npm --name frontEnd "next" -- start
+
