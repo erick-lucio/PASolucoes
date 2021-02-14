@@ -39,3 +39,7 @@ sudo ufw allow port
 
 
 mysql -u root -p // loga my no server
+
+
+//PM2 config
+NODE_ENV=prod pm2 start prod.js --name backEnd

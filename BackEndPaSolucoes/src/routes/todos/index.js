@@ -1,9 +1,9 @@
 const express = require("express");
 const Routes = express.Router()
 const todosRoutes = express.Router();
-const TodosControler = require("../../Controlers/Todos")
+const TodosControler = require("../../controlers/todos")
 const AuthSecurity = require("../../security/auth")
-const defaultResponse = require('../../Controlers/FormatResponse')
+const defaultResponse = require('../../controlers/formatResponse')
 
 todosRoutes.get("/todos/todosAll",  
     AuthSecurity.verifyJWT,
