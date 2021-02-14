@@ -3,16 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "localhost": "cross-env NEXT_PUBLIC_NODE_ENV=dev next dev",
-    "dev": "cross-env NEXT_PUBLIC_NODE_ENV=prod next dev",
+    "localhost": "cross-env NODE_ENV=dev next dev",
+    "dev": "cross-env NODE_ENV=prod next dev",
     "test": "",
-    "build": "next build",
-    "start": "cross-env NEXT_PUBLIC_NODE_ENV=prod next start -p 80"
+    "build": "cross-env NODE_ENV=prod next build",
+    "start": "cross-env NODE_ENV=prod next start -p 81"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "cross-env": "^7.0.3",
     "next": "^10.0.0",
+    "next-compose-plugins": "^2.2.1",
     "next-images": "^1.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
