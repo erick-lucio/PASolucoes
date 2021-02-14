@@ -7,7 +7,7 @@
     "dev": "cross-env NODE_ENV=prod next dev",
     "test": "",
     "build": "cross-env NODE_ENV=prod next build",
-    "start": "cross-env NODE_ENV=prod next start -p 81"
+    "start": "cross-env NODE_ENV=prod next start -p 80"
   },
   "dependencies": {
     "axios": "^0.21.1",
