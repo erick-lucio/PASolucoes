@@ -6,6 +6,7 @@ body {
 }
 * {
   box-sizing: border-box;
+  font-size: 15px;
 }
 .main{
     margin: 0;
@@ -15,6 +16,25 @@ body {
     background-size: cover;
     font-family: "Comfortaa", sans-serif;
     min-height: 100vh;
+}
+input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 45px;
+  color: #000;
+  background: #fff;
+  border-radius: 10px;
+  transition: 0.2s;
+  background: #e5f508;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:#000;
+}
+input[type="submit"]:hover{
+  cursor: pointer;
+  background: #eeff00;
+  transition: 0.2s;
+  color:#000;
+  font-size: 1.15em;
 }
 .row{
   display: flex;
@@ -26,4 +46,25 @@ body {
   display: flex;
   flex: 1 1 auto;
   flex-wrap: wrap;  
+}
+@font-face {
+  font-family: "ytbStar";
+  src: url("../fonts/Youtube Star.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Eastwood";
+  src: url("../fonts/Eastwood.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Wicked";
+  src: url("../fonts/WickedGrit.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
 }

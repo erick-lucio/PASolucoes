@@ -1,0 +1,23 @@
+.sidebar_container{
+    background-color: aqua;
+    height: 85vh;
+    width: 5%;
+    background-color: #dcf02ffa;
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    align-items: center;
+    border-right: 1px solid #000;
+    
+}
+.sidebar_container *{
+    margin-top: 25%;
+}
+.sidebar_menu_icon_div{    
+    background-color: inherit; 
+    padding: 6px;
+    border-radius: 12px;
+}
+.sidebar_icons{
+    cursor: pointer; 
+}

@@ -64,7 +64,7 @@
 
 .loginComponent_login input[type="submit"]:hover{
     cursor: pointer;
-    background: #ff4d4d;
+    background: #d0fa37;
     transition: 0.2s;
 }
 

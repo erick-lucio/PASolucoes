@@ -1,0 +1,85 @@
+.gerente_panel_container{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gerente_panel_dashboard_div{
+    display: flex;
+    margin-top: 2%;
+    background-color: aliceblue;
+    height: 10%;
+    width: 90%;
+    flex-direction: row;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1%;
+    padding-right: 1%;
+    box-shadow: -2px 0px rgb(217, 255, 0);
+}
+.gerente_panel_tabs_div{
+    width: 90%;
+    height: 10%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row; 
+
+    justify-content: space-between;
+}
+.gerente_panel_tabs_div_itens{
+    box-shadow: -2px 0px rgb(217, 255, 0);
+    background-color: aliceblue;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    padding-left: 2%;
+}
+.gerente_panel_services_div{
+    box-shadow: 1px 1px rgb(217, 255, 0);
+    margin-top: 2%;
+    background-color: aliceblue;
+    width: 90%;
+    min-height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.gerente_panel_services_title{
+    padding-top: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.gerente_panel_services_left_title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+}
+.gerente_panel_services_table_div{
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    align-items: flex-start;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+}
+.gerente_panel_service_fixed_th_item{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+    width: fit-content;
+
+}
+.gerente_panel_services_table{
+    width: 100%;
+    border-spacing: 15px;
+}
+.gerente_panel_services_fixed_tr{
+    width: 100%;
+}
+.gerente_panel_service_fixed_td_item{
+   
+}

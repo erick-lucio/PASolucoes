@@ -1,0 +1,33 @@
+.header_container{
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid black;
+    justify-content: space-between;
+}
+.header_logo_div{
+    margin-left: 1%;
+    font-family: Wicked;
+    font-size: 1.8em;
+    
+}
+.header_input_div{
+    margin-left: 5%;
+}
+.header_input_sair_div{
+    margin-right: 2%;
+}
+.header_div_left{
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    align-items: center;
+    margin-left: 10px;
+}
+.header_container input{
+    height: 45px;
+}
