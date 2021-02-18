@@ -21,3 +21,10 @@
 .sidebar_icons{
     cursor: pointer; 
 }
+
+@media (max-width: 800px)
+{
+    .sidebar_container{
+        width: 10%
+    }
+}
