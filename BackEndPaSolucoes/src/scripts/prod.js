@@ -20,5 +20,5 @@ const PORT =  3102;
 server.use(Routes);
 
 server.listen(PORT, () => {
-    console.log(`Server rodando na porta  ${PORT}`);
+    console.log(`Server rodando na porta  ${PORT} PROD mode`);
 });

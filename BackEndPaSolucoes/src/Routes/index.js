@@ -10,6 +10,7 @@ const testeRoutes = require("./testes")
 //     Authenticate.verify(req, res, next)
 // }​​)
 Routes.use(function (req, res, next) { //Middleware Configurar com jwt criar logica
+    
     next();
 });
 

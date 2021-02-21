@@ -22,5 +22,5 @@ const PORT =  3102;
 server.use(Routes);
 
 server.listen(PORT, () => {
-    console.log(`Server rodando em http://localhost:${PORT}`);
+    console.log(`Server rodando em http://localhost:${PORT} DEV mode`);
 });

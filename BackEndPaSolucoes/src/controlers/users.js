@@ -6,8 +6,8 @@ module.exports = {
         next.genToken = false
         const login = req.body.frontRequest?req.body.frontRequest.login :""
         const senha = req.body.frontRequest?req.body.frontRequest.senha :""
-        
-        dbConnection.invokeQuery("SELECT * FROM funcionarios WHERE login = ? AND senha = MD5(?) LIMIT 1",[
+        let sqlQuery = "SELECT * FROM funcionarios WHERE login = ? AND senha = MD5(?) LIMIT 1"
+        dbConnection.invokeQuery(sqlQuery,[
             login,
             senha
         ],(rows)=>{
@@ -15,22 +15,12 @@ module.exports = {
             var response = {                
                 message:rows.length > 0?"Sucess" : "Nenhum usuario Encontrado",    
                 objData:rows.length > 0?rows : 0          
-            }        
-            res.status(200).json(response)
-            
-                     
-        });
-        
-        dbConnection.invokeQuery(sqlQuery,(rows)=>{
-            rows.length > 0?"":res.token = "" 
-            var response = {                
-                message:rows.length > 0?"Sucess" : "Nenhum usuario Encontrado",    
-                objData:rows.length > 0?rows : 0          
             }
             next.response = response
             rows.length > 0?next.genToken = true:next.genToken = false
-            next()            
-        })
+            next()   
+        });
+
     },
     async getAllUsers(req,res,next){
         if (next.tokenMessage || next.status ){

@@ -51,21 +51,25 @@ export default function gerente_panel(props) {
                </div>
             </div> 
             <div className="gerente_panel_services_table_div">
-              <table className="gerente_panel_services_table" CELLPADDING="6">
-                <tr className="gerente_panel_services_fixed_tr">
-                  <td className="gerente_panel_service_fixed_th_item">Numero</td>
-                  <td className="gerente_panel_service_fixed_th_item">Client</td>
-                  <td className="gerente_panel_service_fixed_th_item">Agente</td>
-                  <td className="gerente_panel_service_fixed_th_item">Status</td>
-                  <td className="gerente_panel_service_fixed_th_item">Ultima Alteração</td>
-                </tr>
-                <tr>
-                  <td className="gerente_panel_service_fixed_td_item">0</td>
-                  <td className="gerente_panel_service_fixed_td_item">0</td>
-                  <td className="gerente_panel_service_fixed_td_item">0</td>
-                  <td className="gerente_panel_service_fixed_td_item">0</td>
-                  <td className="gerente_panel_service_fixed_td_item">0</td>
-                </tr>
+              <table className="gerente_panel_services_table" >
+                <thead>
+                  <tr className="gerente_panel_services_fixed_tr">
+                    <th className="gerente_panel_service_fixed_th_item">Numero</th>
+                    <th className="gerente_panel_service_fixed_th_item">Client</th>
+                    <th className="gerente_panel_service_fixed_th_item">Agente</th>
+                    <th className="gerente_panel_service_fixed_th_item">Status</th>
+                    <th className="gerente_panel_service_fixed_th_item">Ultima Alteração</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="gerente_panel_service_fixed_td_item">0</td>
+                    <td className="gerente_panel_service_fixed_td_item">0</td>
+                    <td className="gerente_panel_service_fixed_td_item">0</td>
+                    <td className="gerente_panel_service_fixed_td_item">0</td>
+                    <td className="gerente_panel_service_fixed_td_item">0</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
 

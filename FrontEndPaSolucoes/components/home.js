@@ -28,11 +28,11 @@ export default function Home(props) {
   }
   return (
     <div className="main">
-      <Head>
+      <Head >
         <title>Projeto PA</title>
         <link rel="icon" href="/favicon.ico" />        
       </Head>
-      <Header />
+      <Header setLogged={props.setLogged}/>
       <Main_Content/>
     
 

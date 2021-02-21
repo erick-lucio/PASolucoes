@@ -28,7 +28,7 @@ export default function Header(props) {
             </div>
 
             <div className="header_input_sair_div">
-              <input type="submit" value="Sair"></input>
+              <input type="submit" value="Sair" onClick={()=>props.setLogged(0)}></input>
             </div>
         </div>
     </>

@@ -12,7 +12,7 @@
 .create_atendimento_content{
     width: 100%;
     height: 82%;
-    
+    padding-left: 1%;
     border-radius: 5px;
     color: rgb(12, 12, 12);
     background-color: rgba(255, 255, 255, 0.8);
@@ -98,6 +98,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    
 }
 .create_atendimento_content_pendencia_financeira_div{
     display: flex;
@@ -106,6 +107,57 @@
 }
 .create_atendimento_content_radio_div{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: middle;
+    padding-left: 1%;
+}
+
+.create_atendimento_content_radio_div input[type="radio"]:checked{    
+    box-shadow: 0 0 0 1px #dcf02ffa  !important;
+    color: aqua!important;
+}
+.create_atendimento_content_radio_div input[type="radio"]{    
+    background-color: aqua;
+    padding: 1px;
+    height: 30px;
+}
+.create_atendimento_content_titles{
+    font-family: Comfortaa;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding-top: 1%;
+    color: #dcf02ffa;
+    text-shadow: 1px 1px 1px rgb(0,0,0);
+}
+.create_atendimento_content_pendencia_financeira_div input[type="text"]{
+    border: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid #dcf02ffa;    
+    height: 30px;
+    outline: none;
+    width: 50%;
+    margin-top: 1%;
+}
+.create_atendimento_content_pendencia_financeira_div input[type="text"]:focus{
+    border: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid #dcf02ffa;    
+    outline: none;
+
+}
+.create_atendimento_content_contrato_div input[type="text"]{
+    border: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid #dcf02ffa;    
+    height: 30px;
+    outline: none;
+    width: 50%;
+    margin-top: 1%;
+}
+.create_atendimento_content_contrato_div input[type="text"]:focus{
+    border: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid #dcf02ffa;    
+    outline: none;
 }
